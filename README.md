@@ -1,20 +1,71 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 威信視聽｜伴唱機一站式服務
 
-# Run and deploy your AI Studio app
+威信視聽器材行的官方網站，提供伴唱機買賣、音響設備銷售、維修保養等服務介紹。
 
-This contains everything you need to run your app locally.
+## 技術規格
 
-View your app in AI Studio: https://ai.studio/apps/drive/1okGbxJ4jyZhrsKsVDtZDXH4IDlX0mGVy
+- **框架**：React 19 + TypeScript
+- **建置工具**：Vite 6
+- **樣式**：Tailwind CSS
+- **路由**：React Router v7
+- **圖示**：Lucide React
 
-## Run Locally
+## 專案結構
 
-**Prerequisites:**  Node.js
+```
+├── App.tsx          # 主程式、導覽列、Footer、浮動按鈕
+├── index.tsx        # 入口檔案
+├── index.html       # HTML 模板
+├── constants.tsx    # 店家資訊、服務項目、品牌、FAQ
+├── vite.config.ts   # Vite 設定
+├── pages/           # 頁面元件
+│   ├── Home.tsx     # 首頁
+│   ├── Services.tsx # 服務項目
+│   ├── Brands.tsx   # 品牌專區
+│   ├── FAQ.tsx      # 常見問題
+│   └── Contact.tsx  # 聯絡我們
+```
 
+## 開始使用
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 安裝依賴
+
+```bash
+npm install
+```
+
+### 開發模式
+
+```bash
+npm run dev
+```
+
+於瀏覽器開啟 `http://localhost:3000`（依 vite.config 為 port 3000）。
+
+### 建置與預覽
+
+```bash
+npm run build    # 產生 dist 目錄
+npm run preview  # 預覽建置結果
+```
+
+## 修改店家資訊
+
+所有店家相關內容集中於 `constants.tsx`：
+
+- `BUSINESS_INFO`：店名、電話、地址、營業時間
+- `SERVICES`：服務項目與描述
+- `BRANDS`：支援品牌
+- `FAQS`：常見問題
+
+直接編輯該檔案即可更新網站內容。
+
+## 注意事項
+
+- 本專案為純前端，不包含後端或 API
+- 請勿直接雙擊 `index.html` 開啟，需透過 `npm run dev` 啟動開發伺服器
+- 建置後可將 `dist` 目錄部署至任何靜態網站託管服務（如 GitHub Pages、Vercel、Netlify）
+
+## 授權
+
+Private - 威信視聽器材行 版權所有
