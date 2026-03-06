@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>威信視聽</title>
+  </head>
+  <body>
+    <script>
+      // Generic SPA fallback for static hosts that serve 404.html on unknown routes.
+      // This keeps the requested path so the router can render it after redirect.
+      (function () {
+        var l = window.location;
+        l.replace(l.origin + "/?spa_redirect=" + encodeURIComponent(l.pathname + l.search + l.hash));
+      })();
+    </script>
+  </body>
+</html>
