@@ -16,12 +16,17 @@ const Home: React.FC = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="relative max-w-7xl mx-auto flex flex-col items-center text-center">
-          <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight drop-shadow-lg">
-            點將家電腦伴唱機 北區維修服務/展示中心｜伴唱機買賣・音響設備銷售・維修保養
+        <div className="relative max-w-4xl mx-auto flex flex-col items-center text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 leading-snug drop-shadow-lg tracking-tight">
+            <span className="block">點將家電腦伴唱機</span>
+            <span className="block mt-1 text-blue-100 text-[0.85em] font-bold">北區維修服務／展示中心</span>
           </h1>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mb-12 drop-shadow-md">
-            點將家北區服務中心，專營大台北地區點將家電腦伴唱機。提供家用、店家 KTV 規劃服務，從選機、安裝、伴唱機設備修理到維修保養，一次搞定。
+          <p className="text-base md:text-lg text-blue-200/90 tracking-widest mb-6 font-medium">
+            伴唱機買賣  ·  音響設備銷售  ·  維修保養
+          </p>
+          <p className="text-lg md:text-xl text-blue-100/95 max-w-2xl leading-relaxed mb-12 drop-shadow-md">
+            點將家北區服務中心，專營大台北地區點將家電腦伴唱機。<br className="hidden sm:inline" />
+            家用、店家 KTV 規劃，從選機、安裝到維修保養，一次搞定。
           </p>
           <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
             <a 
