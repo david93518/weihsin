@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react
 import { Menu, X, Phone } from 'lucide-react';
 import Home from './pages/Home';
 import Services from './pages/Services';
-import Brands from './pages/Brands';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
 import { BUSINESS_INFO } from './constants';
@@ -47,9 +46,9 @@ const Seo: React.FC = () => {
   const seo = useMemo(() => {
     const pathname = location.pathname || '/';
 
-    const baseTitle = '威信視聽｜伴唱機買賣・到府安裝設定・維修保養';
+    const baseTitle = '點將家電腦伴唱機 北區維修服務/展示中心｜伴唱機買賣・到府安裝設定・維修保養';
     const baseDescription =
-      '威信視聽，專營大台北地區點將家 / 金嗓 / 音圓系統。提供家用、店家 KTV 規劃服務，從選機、安裝、伴唱機設備修理到維修保養，一次搞定。';
+      '點將家電腦伴唱機 北區維修服務/展示中心，專營大台北地區點將家電腦伴唱機。提供家用、店家 KTV 規劃服務，從選機、安裝、伴唱機設備修理到維修保養，一次搞定。';
 
     const byPath: Record<string, { title: string; description: string }> = {
       '/': {
@@ -60,11 +59,6 @@ const Seo: React.FC = () => {
         title: `服務項目｜${baseTitle}`,
         description:
           '大台北地區 KTV 規劃與伴唱機一站式服務：選機搭配、到府安裝設定、音響設備銷售、伴唱機設備修理與維修保養。',
-      },
-      '/brands': {
-        title: `品牌專區（點將家 / 金嗓 / 音圓）｜${baseTitle}`,
-        description:
-          '點將家 / 金嗓 / 音圓 系統專業支援，包含買賣、安裝設定、故障排除與維修保養。提供型號與狀況，快速評估處理方式。',
       },
       '/faq': {
         title: `常見問題 FAQ｜${baseTitle}`,
@@ -108,12 +102,16 @@ const Seo: React.FC = () => {
     const ogType = ensurePropertyTag('og:type');
     ogType.setAttribute('content', 'website');
     const ogSiteName = ensurePropertyTag('og:site_name');
-    ogSiteName.setAttribute('content', '威信視聽');
+    ogSiteName.setAttribute('content', '點將家電腦伴唱機 北區維修服務/展示中心');
+    const ogImage = ensurePropertyTag('og:image');
+    ogImage.setAttribute('content', `${SITE_ORIGIN}/logo.png`);
     const ogLocale = ensurePropertyTag('og:locale');
     ogLocale.setAttribute('content', 'zh_TW');
 
     const twCard = ensureMetaTag('twitter:card');
     twCard.setAttribute('content', 'summary_large_image');
+    const twImage = ensureMetaTag('twitter:image');
+    twImage.setAttribute('content', `${SITE_ORIGIN}/logo.png`);
     const twTitle = ensureMetaTag('twitter:title');
     twTitle.setAttribute('content', seo.title);
     const twDesc = ensureMetaTag('twitter:description');
@@ -130,7 +128,6 @@ const Navbar = () => {
   const navLinks = [
     { name: '首頁', path: '/' },
     { name: '服務項目', path: '/services' },
-    { name: '品牌專區', path: '/brands' },
     { name: '常見問題', path: '/faq' },
     { name: '聯絡我們', path: '/contact' },
   ];
@@ -139,9 +136,9 @@ const Navbar = () => {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          <Link to="/" className="flex flex-col">
-            <span className="text-xl font-black text-blue-900 leading-tight">威信視聽</span>
-            <span className="text-xs text-gray-500 font-medium">伴唱機專業服務</span>
+          <Link to="/" className="flex items-center gap-2 min-w-0">
+            <img src="/logo.png" alt="點將家 (Dian Jiang Jia) 官方 Logo" className="h-10 flex-shrink-0" />
+            <span className="hidden sm:inline text-base md:text-xl font-black text-blue-900 leading-tight">點將家電腦伴唱機 北區維修服務/展示中心</span>
           </Link>
 
           {/* Desktop Links */}
@@ -213,8 +210,8 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white py-12 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
         <div>
-          <h3 className="text-xl font-bold mb-4">威信視聽器材行</h3>
-          <p className="text-gray-400 text-sm mb-4">專業點將家 / 金嗓 / 音圓系統。家用、店家 KTV 規劃，從選機、安裝到維修保養，一次搞定。</p>
+          <h3 className="text-xl font-bold mb-4">點將家電腦伴唱機 北區維修服務/展示中心</h3>
+          <p className="text-gray-400 text-sm mb-4">專營點將家電腦伴唱機。家用、店家 KTV 規劃，從選機、安裝到維修保養，一次搞定。</p>
         </div>
         <div>
           <h3 className="text-xl font-bold mb-4">快速聯絡</h3>
@@ -234,7 +231,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-xs">
-        &copy; {new Date().getFullYear()} 威信視聽器材行 版權所有.
+        &copy; {new Date().getFullYear()} 點將家電腦伴唱機 北區維修服務/展示中心 版權所有.
       </div>
     </footer>
   );
@@ -250,7 +247,6 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/brands" element={<Brands />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

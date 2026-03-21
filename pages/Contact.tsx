@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
     <div className="bg-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-black mb-4">聯絡威信視聽</h1>
+          <h1 className="text-4xl font-black mb-4">聯絡點將家電腦伴唱機 北區維修服務/展示中心</h1>
           <p className="text-lg text-gray-600">我們位於萬華區，歡迎預約到店或是諮詢到府服務</p>
         </div>
 
@@ -22,10 +22,9 @@ const Contact: React.FC = () => {
                   <h3 className="text-xl font-bold mb-2">快速諮詢請提供</h3>
                   <p className="text-gray-700 leading-relaxed">
                     為了給您更精確的報價，諮詢時請註明：<br/>
-                    <span className="font-bold text-blue-800">1. 品牌 (點將家/金嗓/音圓)</span><br/>
-                    <span className="font-bold text-blue-800">2. 型號</span><br/>
-                    <span className="font-bold text-blue-800">3. 需求 (買機/更新/維修)</span><br/>
-                    <span className="font-bold text-blue-800">4. 問題描述與照片</span>
+                    <span className="font-bold text-blue-800">1. 點將家機型/型號</span><br/>
+                    <span className="font-bold text-blue-800">2. 需求 (買機/更新/維修)</span><br/>
+                    <span className="font-bold text-blue-800">3. 問題描述與照片</span>
                   </p>
                 </div>
               </div>

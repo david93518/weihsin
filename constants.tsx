@@ -3,7 +3,7 @@ import React from 'react';
 import { ShoppingCart, RefreshCw, Wrench, Settings } from 'lucide-react';
 
 export const BUSINESS_INFO = {
-  name: "威信視聽器材行",
+  name: "點將家電腦伴唱機 北區維修服務/展示中心",
   phone: "0932 916 726",
   phoneDisplay: "0932-916-726",
   address: "108 臺北市萬華區萬大路 277 巷 3 號",
@@ -68,26 +68,6 @@ export const SERVICES = [
   }
 ];
 
-export const BRANDS = [
-  {
-    name: "點將家",
-    title: "點將家伴唱機｜買賣・音響設備・維修",
-    content: "點將家伴唱機的買賣、音響設備（擴大機、喇叭、麥克風等）與故障排除都可協助。建議提供型號與狀況，我們會先評估處理方式。",
-    keywords: ["點將家音響設備", "點將家周邊", "點將家維修"]
-  },
-  {
-    name: "金嗓",
-    title: "金嗓伴唱機｜買賣・音響設備・維修",
-    content: "金嗓伴唱機的買賣、音響設備（擴大機、喇叭、麥克風等）與故障排除都可先諮詢。提供型號與需求，我們協助評估。",
-    keywords: ["金嗓音響設備", "金嗓周邊", "金嗓維修"]
-  },
-  {
-    name: "音圓",
-    title: "音圓伴唱機｜買賣・音響設備・維修",
-    content: "音圓伴唱機的買賣、音響設備（擴大機、喇叭、麥克風等）與維修保養都可協助，建議先提供型號與狀況。",
-    keywords: ["音圓音響設備", "音圓周邊", "音圓維修"]
-  }
-];
 
 export const FAQS = [
   { q: "音響設備購買/安裝需要多久？", a: "依設備種類與安裝複雜度不同，請先說明需求與空間狀況，我們評估後告知報價與工期。" },

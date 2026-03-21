@@ -2,7 +2,7 @@
 import React from 'react';
 import { Phone, ArrowRight, CheckCircle2, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { BUSINESS_INFO, SERVICES, BRANDS } from '../constants';
+import { BUSINESS_INFO, SERVICES } from '../constants';
 
 const Home: React.FC = () => {
   return (
@@ -18,10 +18,10 @@ const Home: React.FC = () => {
         </div>
         <div className="relative max-w-7xl mx-auto flex flex-col items-center text-center">
           <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight drop-shadow-lg">
-            威信視聽｜伴唱機買賣・音響設備銷售・維修保養
+            點將家電腦伴唱機 北區維修服務/展示中心｜伴唱機買賣・音響設備銷售・維修保養
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mb-12 drop-shadow-md">
-            點將家北區服務中心，專營大台北地區點將家 / 金嗓 / 音圓系統。提供家用、店家 KTV 規劃服務，從選機、安裝、伴唱機設備修理到維修保養，一次搞定。
+            點將家北區服務中心，專營大台北地區點將家電腦伴唱機。提供家用、店家 KTV 規劃服務，從選機、安裝、伴唱機設備修理到維修保養，一次搞定。
           </p>
           <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
             <a 
@@ -84,20 +84,27 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Brand Support */}
+      {/* 點將家專業服務優勢 */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-black mb-16 text-gray-400 uppercase tracking-widest">常見主流品牌專業支援</h2>
-          <div className="flex flex-wrap justify-center gap-12 md:gap-24">
-            {BRANDS.map((brand) => (
-              <div key={brand.name} className="flex flex-col items-center group">
-                <div className="w-40 h-40 md:w-52 md:h-52 rounded-full bg-blue-50 flex items-center justify-center border-4 border-white shadow-xl group-hover:shadow-blue-100 group-hover:border-blue-500 transition-all cursor-default">
-                  <span className="text-3xl md:text-4xl font-black text-blue-900">{brand.name}</span>
-                </div>
-                <p className="mt-6 text-xl font-black text-gray-800">{brand.name} 伴唱機</p>
-                <p className="text-sm text-gray-400 mt-2">買賣 / 音響設備 / 維修</p>
-              </div>
-            ))}
+          <h2 className="text-3xl font-black mb-4 text-gray-900">點將家專業服務優勢</h2>
+          <p className="text-gray-500 mb-16 max-w-2xl mx-auto">專營點將家電腦伴唱機，北區最專業的維修與展示據點</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="bg-blue-50 p-10 rounded-3xl border-2 border-blue-100 hover:border-blue-300 transition-colors">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-3xl font-black">專</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">專營點將家</h3>
+              <p className="text-gray-600">深耕點將家電腦伴唱機，買賣、安裝、維修一站式服務，技術最專業。</p>
+            </div>
+            <div className="bg-blue-50 p-10 rounded-3xl border-2 border-blue-100 hover:border-blue-300 transition-colors">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-3xl font-black">快</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">快速到府服務</h3>
+              <p className="text-gray-600">大台北地區到府安裝、維修，節省您的時間，問題即時解決。</p>
+            </div>
+            <div className="bg-blue-50 p-10 rounded-3xl border-2 border-blue-100 hover:border-blue-300 transition-colors">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-3xl font-black">穩</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">實體展示中心</h3>
+              <p className="text-gray-600">歡迎到店體驗點將家機型，現場試唱、專業諮詢，買得安心。</p>
+            </div>
           </div>
         </div>
       </section>

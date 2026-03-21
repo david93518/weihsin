@@ -9,7 +9,7 @@ const Services: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-black mb-4">服務項目</h1>
-          <p className="text-lg text-gray-600">把您的需求交給威信視聽，我們提供最專業的一站式解決方案</p>
+          <p className="text-lg text-gray-600">把您的需求交給點將家電腦伴唱機 北區維修服務/展示中心，我們提供最專業的一站式解決方案</p>
         </div>
 
         <div className="space-y-12">
