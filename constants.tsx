@@ -30,8 +30,8 @@ export const SERVICES = [
     features: ['家用 KTV 整套規劃', '店家/商用規劃', '安裝設定、音效調整'],
     icon: <ShoppingCart className="w-8 h-8" />,
     ctaText: '我要詢價',
-    // 專業家庭影音規劃圖
-    imageUrl: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=1200"
+    imageUrl: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=1200",
+    imageAlt: "點將家伴唱機 KTV 整套規劃，家用客廳與店家包廂設備安裝"
   },
   {
     id: 'update',
@@ -42,7 +42,8 @@ export const SERVICES = [
     icon: <RefreshCw className="w-8 h-8" />,
     ctaText: '我要詢價音響設備',
     // 音響設備
-    imageUrl: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=1200"
+    imageUrl: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=1200",
+    imageAlt: "點將家伴唱機音響設備：擴大機、喇叭、麥克風、效果器"
   },
   {
     id: 'repair',
@@ -52,8 +53,8 @@ export const SERVICES = [
     features: ['沒聲音、破音、雜音', '讀不到歌、點歌失靈', '麥克風回授調整'],
     icon: <Wrench className="w-8 h-8" />,
     ctaText: '我要報修',
-    // 專業維修師工作環境
-    imageUrl: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200"
+    imageUrl: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200",
+    imageAlt: "點將家電腦伴唱機維修保養、故障排除專業服務"
   },
   {
     id: 'accessories',
@@ -63,8 +64,8 @@ export const SERVICES = [
     features: ['高階無線麥克風', '音響喇叭升級', '線材與音場優化'],
     icon: <Settings className="w-8 h-8" />,
     ctaText: '我要升級',
-    // 專業麥克風特寫
-    imageUrl: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=1200"
+    imageUrl: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=1200",
+    imageAlt: "點將家伴唱機周邊配件：麥克風、音響升級"
   }
 ];
 

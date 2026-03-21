@@ -48,7 +48,7 @@ const Services: React.FC = () => {
               <div className="md:w-1/2 w-full h-[400px] overflow-hidden rounded-xl shadow-lg">
                 <img 
                   src={svc.imageUrl} 
-                  alt={svc.title} 
+                  alt={(svc as { imageAlt?: string }).imageAlt || svc.title} 
                   className="w-full h-full object-cover"
                 />
               </div>

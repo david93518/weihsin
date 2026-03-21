@@ -56,19 +56,19 @@ const Seo: React.FC = () => {
         description: baseDescription,
       },
       '/services': {
-        title: `服務項目｜${baseTitle}`,
+        title: `服務項目｜點將家伴唱機買賣・音響設備・維修保養｜${baseTitle}`,
         description:
-          '大台北地區 KTV 規劃與伴唱機一站式服務：選機搭配、到府安裝設定、音響設備銷售、伴唱機設備修理與維修保養。',
+          '點將家電腦伴唱機服務：伴唱機買賣、整套 KTV 規劃、到府安裝、音響設備銷售（擴大機、喇叭、麥克風）、維修保養、故障排除。台北萬華區展示中心。',
       },
       '/faq': {
-        title: `常見問題 FAQ｜${baseTitle}`,
+        title: `常見問題｜點將家伴唱機維修、安裝、型號辨識｜${baseTitle}`,
         description:
-          '整理客戶最常詢問的伴唱機與音響問題：沒聲音、破音雜音、當機、讀不到歌、點歌失靈、更新與維修流程等。',
+          '點將家伴唱機常見問題：沒聲音、破音雜音、當機、讀不到歌、點歌失靈、維修流程、到府安裝、型號辨識。台北伴唱機維修 FAQ。',
       },
       '/contact': {
-        title: `聯絡我們｜${baseTitle}`,
+        title: `聯絡我們｜點將家北區維修・展示中心｜${baseTitle}`,
         description:
-          '位於台北市萬華區，提供到店與到府諮詢服務。來電前請準備品牌、型號、需求與問題照片，回覆更快速。',
+          '點將家電腦伴唱機北區服務中心，台北市萬華區。到店體驗、到府安裝維修。來電請準備型號與問題照片，回覆更快速。',
       },
     };
 
@@ -86,6 +86,9 @@ const Seo: React.FC = () => {
 
     const desc = ensureMetaTag('description');
     desc.setAttribute('content', seo.description);
+
+    const keywords = ensureMetaTag('keywords');
+    keywords.setAttribute('content', '點將家,點將家維修,點將家伴唱機,點將家電腦伴唱機,伴唱機維修,伴唱機買賣,台北伴唱機,KTV規劃,伴唱機安裝,音響設備銷售,萬華伴唱機');
 
     const robots = ensureMetaTag('robots');
     robots.setAttribute('content', 'index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1');
@@ -212,6 +215,15 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-bold mb-4">點將家電腦伴唱機 北區維修服務/展示中心</h3>
           <p className="text-gray-400 text-sm mb-4">專營點將家電腦伴唱機。家用、店家 KTV 規劃，從選機、安裝到維修保養，一次搞定。</p>
+          <div className="flex flex-wrap gap-3 text-sm">
+            <Link to="/services" className="text-blue-400 hover:text-white transition-colors">伴唱機買賣</Link>
+            <span className="text-gray-600">|</span>
+            <Link to="/services" className="text-blue-400 hover:text-white transition-colors">伴唱機維修</Link>
+            <span className="text-gray-600">|</span>
+            <Link to="/faq" className="text-blue-400 hover:text-white transition-colors">常見問題</Link>
+            <span className="text-gray-600">|</span>
+            <Link to="/contact" className="text-blue-400 hover:text-white transition-colors">聯絡我們</Link>
+          </div>
         </div>
         <div>
           <h3 className="text-xl font-bold mb-4">快速聯絡</h3>

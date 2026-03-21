@@ -12,7 +12,7 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 opacity-40">
           <img 
             src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=2000" 
-            alt="Karaoke room background" 
+            alt="點將家電腦伴唱機 KTV 包廂環境，專業伴唱機與音響設備展示" 
             className="w-full h-full object-cover"
           />
         </div>
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
               <div className="h-56 overflow-hidden bg-gray-200">
                 <img 
                   src={svc.imageUrl} 
-                  alt={svc.title} 
+                  alt={(svc as { imageAlt?: string }).imageAlt || svc.title} 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
